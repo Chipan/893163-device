@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/23/user/893163).
-* Наставник: [Александр Панасюк](https://up.htmlacademy.ru/htmlcss/23/user/492311
+* Наставник: [Александр Панасюк](https://up.htmlacademy.ru/htmlcss/23/user/492311).
 
 ---
 
