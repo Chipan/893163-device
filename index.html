@@ -9,15 +9,29 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation"> 
-      <div><a сlass="main-navigation-logo">DEVICE</a></div>
-      <a class="user-naivigation" href="/search">Поиск по сайту</a>
+      <div><a сlass="main-navigation-logo" href="#">DEVICE</a></div>
+      <form class="user-naivigation-search" action="https://echo.htmlacademy.ru" method="get">
+        <p class="user-naivigation-search">
+          <label for="user-naivigation-search" class="visually-hidden">Поиск по сайту</label>
+          <input id="user-naivigation-search" type="text" name="search-item" value="" placeholder="Поиск по сайту">
+        </p>
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
       <ul>
-        <li><a class="user-naivigation" href="/login">Войти</a></li>
-        <li><a class="user-naivigation" href="/compare">Сравнить</a></li>
-        <li><a class="user-naivigation" href="/basket">Корзина</a></li>
+        <li><a class="user-naivigation-login" href="/login">Войти</a></li>
+        <li><a class="user-naivigation-compare" href="/compare">Сравнить</a></li>
+        <li><a class="user-naivigation-basket" href="/basket">Корзина</a></li>
       </ul>
-      <ul class="site-navigation">
+      <ul class="site-navigation-catalog">
         <li><a href="catalog.html">Каталог товаров</a></li>
+        <ul>
+          <li><a href="catalog.html">Виртуальная реальность</li></a>
+          <li><a href="catalog.html">Моноподы для селфи</li></a>
+          <li><a href="catalog.html">Экшн-камеры</li></a>
+          <li><a href="catalog.html">Фитнес-браслеты</li></a>
+          <li><a href="catalog.html">Умные часы</li></a>
+          <li><a href="catalog.html">Квадрокоптеры</li></a>
+        </ul>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
@@ -50,6 +64,40 @@
       </figure>
       <a class="button" href="contact-us.html">Напишите нам</a>
     </section>
+
+    <section class="modal-write-us">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form class="modal-write-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-write-us-item">
+          <label for="modal-write-us-name">Ваше имя:</label>
+          <input id="modal-write-us-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+        </p>
+        <p class="modal-write-us-item">
+          <label for="modal-write-us-email">Ваш e-mail:</label>
+          <input id="modal-write-us-email" type="text" name="email" value="" placeholder="email@example.com">
+        </p>
+        <p class="modal-write-us-item">
+          <label for="modal-write-us-text">Текст письма:</label>
+          <input id="modal-write-us-text" type="text" name="wtite-us-text" value="" placeholder="В свободной форме">
+        </p>
+        <button class="button" type="submit">Отправить</button>
+        <button class="modal-close" type="button">
+          Закрыть
+        </button>
+      </form>
+    </section>
+
+    <section class="modal-map">
+      <h2 class="visually-hidden">
+        Как до нас добраться
+      </h2>
+      <p>
+        <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
+      </p>
+      <button class="modal-close" type="button">
+        Закрыть
+      </button>
+    </section>
   </main>
   <footer class="main-footer">
     <nav class="main-footer-navigation">
@@ -77,7 +125,7 @@
       </ul>
     </div>
     <span class="footer-copyright">
-      <a class="button-html-academy" href="https://htmlacademy.ru">
+      <a class="button-html-academy" href="https://htmlacademy.ru" aria-label="сайт разработан компанией htmlacademy.ru">
         <img src="img/index-logo.svg" width="27" height="35" alt="Логотип академии»">
       </a>
     </span>

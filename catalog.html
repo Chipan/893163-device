@@ -9,18 +9,36 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation"> 
-      <div><a сlass="main-navigation-logo">DEVICE</a></div>
-      <a class="user-naivigation" href="/search">Поиск по сайту</a>
+      <div><a сlass="main-navigation-logo" href="#">DEVICE</a></div>
+      <form class="user-naivigation-search" action="https://echo.htmlacademy.ru" method="get">
+        <p class="user-naivigation-search">
+          <label for="user-naivigation-search" class="visually-hidden">Поиск по сайту</label>
+          <input id="user-naivigation-search" type="text" name="search-item" value="" placeholder="Поиск по сайту">
+        </p>
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
       <ul>
-        <li><a class="user-naivigation" href="/user">Валентин Петухов</a></li>
-        <li><a class="user-naivigation" href="/logout">Выйти</a></li>
+        <li><a class="user-naivigation" href="/user">Валентин Петухов</a>
+          <button class="logout-button" type="button">
+            Выйти
+          </button>
+        </li>
         <li><a class="user-naivigation" href="/compare">Сравнить</a></li>
         <li><a class="user-naivigation" href="/basket">Корзина</a></li>
       </ul>
-      <li><a href="catalog.html">Каталог товаров</a></li>
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Гарантия</a></li>
-      <li><a href="#">Контакты</a></li>
+      <ul class="site-navigation-catalog">
+        <li><a href="catalog.html">Каталог товаров</a></li>
+        <ul>
+          <li><a href="catalog.html">Виртуальная реальность</li></a>
+          <li><a href="catalog.html">Моноподы для селфи</li></a>
+          <li><a href="catalog.html">Экшн-камеры</li></a>
+          <li><a href="catalog.html">Фитнес-браслеты</li></a>
+          <li><a href="catalog.html">Умные часы</li></a>
+          <li><a href="catalog.html">Квадрокоптеры</li></a>
+        </ul>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -34,30 +52,56 @@
 
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
-      <div class="colour-filter">
-        <h3 class="colour-filter-title">Цвет</h3>
-        <input type="checkbox" name="colour-filter" value="black" checked>
-        <label>Черный</label>
-        <input type="checkbox" name="colour-filter" value="white">
-        <label>Белый</label>
-        <input type="checkbox" name="colour-filter" value="blue" checked>
-        <label>Синий</label>
-        <input type="checkbox" name="colour-filter" value="red" checked>
-        <label>Красный</label>
-        <input type="checkbox" name="colour-filter" value="pink">
-        <label>Розовый</label>
-      </div>
-      <div class="bluetooth-filter">
-        <h3 class="bluetooth-filter-title">Bluetooth</h3>
-        <input type="radio" name="bluetooth-filter" value="yes" checked>
-        <label>Есть</label>
-        <input type="radio" name="bluetooth-filter" value="no">
-        <label>Нет</label><br>
-      </div>
-      <div>
-        <a class="button" href="#">Показать</a>
-      </div>
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Цвет</legend>
+          <ul>
+            <li class="colour-filter">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black"
+                checked>
+              <label for="filter-black">Черный</label>
+            </li>
+            <li class="colour-filter">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white">
+              <label for="filter-black">Белый</label>
+            </li>
+            <li class="colour-filter">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue"
+                checked>
+              <label for="filter-black">Синий</label>
+            </li>
+            <li class="colour-filter">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="red" id="filter-red"
+                checked>
+              <label for="filter-black">Красный</label>
+            </li>
+            <li class="colour-filter">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pink" id="filter-pink">
+              <label for="filter-black">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Bluetooth</legend>
+          <ul>
+            <li class="bluetooth-filter">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth-filter" value="yes"
+                id="bluetooth-filter-yes" checked>
+              <label for="bluetooth-filter-yes">Есть</label>
+            </li>
+            <li class="bluetooth-filter">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth-filter" value="no"
+                id="bluetooth-filter-no">
+              <label for="bluetooth-filter-no">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="filter-button">
+          Показать
+        </button>
+      </form>
     </section>
+
 
     <section class="catalog">
       <h2 class="visually-hidden">Список товаров</h2>
@@ -128,8 +172,11 @@
     <nav class="main-footer-navigation">
       <div><a сlass="main-footer-navigation-logo" href="#">DEVICE</a></div>
       <ul>
-        <li><a class="user-naivigation" href="/user">Валентин Петухов</a></li>
-        <li><a class="user-naivigation" href="/logout">Выйти</a></li>
+        <li><a class="user-naivigation" href="/user">Валентин Петухов</a>
+          <button class="logout-button" type="button">
+            Выйти
+          </button>
+        </li>
         <li><a class="user-footer-navigation" href="/compare">Сравнить</a></li>
         <li><a class="user-footer-navigation" href="/basket">Корзина</a></li>
       </ul>
