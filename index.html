@@ -4,26 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>Девайс - интернет-магазин электроники</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page">
   <header class="main-header">
     <nav class="main-navigation"> 
-      <div><a сlass="main-navigation-logo" href="#">DEVICE</a></div>
-      <form class="user-naivigation-search" action="https://echo.htmlacademy.ru" method="get">
-        <p class="user-naivigation-search">
-          <label for="user-naivigation-search" class="visually-hidden">Поиск по сайту</label>
-          <input id="user-naivigation-search" type="text" name="search-item" value="" placeholder="Поиск по сайту">
+      <div class="main-header-logo"><a href="#">DEVICE</a></div>
+      <form class="user-navigation-search" action="https://echo.htmlacademy.ru" method="get">
+        <p>
+          <label for="user-navigation-search" class="visually-hidden">Поиск по сайту</label>
+          <input id="search" type="text" name="search-item" value="" placeholder="Поиск по сайту">
         </p>
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
-      <ul>
-        <li><a class="user-naivigation-login" href="/login">Войти</a></li>
-        <li><a class="user-naivigation-compare" href="/compare">Сравнить</a></li>
-        <li><a class="user-naivigation-basket" href="/basket">Корзина</a></li>
+      <ul class="user-navigation">
+        <li><a href="/login">Войти</a></li>
+        <li><a href="/compare">Сравнить</a></li>
+        <li><a href="/basket">Корзина</a></li>
       </ul>
       <ul class="site-navigation-catalog">
         <li><a href="catalog.html">Каталог товаров</a></li>
+        <!--
         <ul>
           <li><a href="catalog.html">Виртуальная реальность</li></a>
           <li><a href="catalog.html">Моноподы для селфи</li></a>
@@ -32,6 +35,7 @@
           <li><a href="catalog.html">Умные часы</li></a>
           <li><a href="catalog.html">Квадрокоптеры</li></a>
         </ul>
+        -->
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
@@ -52,7 +56,7 @@
         <li>Автотрейдинг</li>
         <li>ЖелДорЭкспедиция</li>
       </ul>
-      <a class="button" href="more-about.html">Подробнее о нас</a>
+      <a class="button-1" href="more-about.html">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
@@ -62,50 +66,17 @@
       <figure class="map">
         <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Карта"></a>
       </figure>
-      <a class="button" href="contact-us.html">Напишите нам</a>
-    </section>
-
-    <section class="modal-write-us">
-      <h2 class="visually-hidden">Напишите нам</h2>
-      <form class="modal-write-us-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-write-us-item">
-          <label for="modal-write-us-name">Ваше имя:</label>
-          <input id="modal-write-us-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-        </p>
-        <p class="modal-write-us-item">
-          <label for="modal-write-us-email">Ваш e-mail:</label>
-          <input id="modal-write-us-email" type="text" name="email" value="" placeholder="email@example.com">
-        </p>
-        <p class="modal-write-us-item">
-          <label for="modal-write-us-text">Текст письма:</label>
-          <input id="modal-write-us-text" type="text" name="wtite-us-text" value="" placeholder="В свободной форме">
-        </p>
-        <button class="button" type="submit">Отправить</button>
-        <button class="modal-close" type="button">
-          Закрыть
-        </button>
-      </form>
-    </section>
-
-    <section class="modal-map">
-      <h2 class="visually-hidden">
-        Как до нас добраться
-      </h2>
-      <p>
-        <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
-      </p>
-      <button class="modal-close" type="button">
-        Закрыть
-      </button>
+      <a class="button-1" href="contact-us.html">Напишите нам</a>
     </section>
   </main>
+
   <footer class="main-footer">
-    <nav class="main-footer-navigation">
-      <a сlass="main-footer-navigation-logo" href="#">DEVICE</a>
-      <ul>
-        <li><a class="user-footer-navigation" href="/login">Войти</a></li>
-        <li><a class="user-footer-navigation" href="/compare">Сравнить</a></li>
-        <li><a class="user-footer-navigation" href="/basket">Корзина</a></li>
+    <nav>
+      <div сlass="footer-logo"><a href="#">DEVICE</a></div>
+      <ul class="user-footer-navigation">
+        <li><a href="/login">Войти</a></li>
+        <li><a href="/compare">Сравнить</a></li>
+        <li><a href="/basket">Корзина</a></li>
       </ul>
       <ul class="site-footer-navigation">
         <li><a href="#">Доставка</a></li>
@@ -118,10 +89,10 @@
       <span class="footer-contacts-number">Тел.: +7 (495) 495-95-95</span>
     </div>
     <div class="footer-social">
-      <ul>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-        <li><a class="social-button" href="#">Твиттер</a></li>
+      <ul class="social-button">
+        <li><a href="#">Фейсбук</a></li>
+        <li><a href="#">Инстаграм</a></li>
+        <li><a href="#">Твиттер</a></li>
       </ul>
     </div>
     <span class="footer-copyright">
@@ -130,6 +101,39 @@
       </a>
     </span>
   </footer>
+  <section class="modal-write-us">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="modal-write-us-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="modal-write-us-item">
+        <label for="modal-write-us-name">Ваше имя:</label>
+        <input id="modal-write-us-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+      </p>
+      <p class="modal-write-us-item">
+        <label for="modal-write-us-email">Ваш e-mail:</label>
+        <input id="modal-write-us-email" type="text" name="email" value="" placeholder="email@example.com">
+      </p>
+      <p class="modal-write-us-item">
+        <label for="modal-write-us-text">Текст письма:</label>
+        <input id="modal-write-us-text" type="text" name="wtite-us-text" value="" placeholder="В свободной форме">
+      </p>
+      <button class="button-form" type="submit">Отправить</button>
+      <button class="modal-close" type="button">
+        Закрыть
+      </button>
+    </form>
+  </section>
+
+  <section class="modal-map">
+    <h2 class="visually-hidden">
+      Как до нас добраться
+    </h2>
+    <p>
+      <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
+    </p>
+    <button class="modal-close" type="button">
+      Закрыть
+    </button>
+  </section>
 </body>
 
 </html>
