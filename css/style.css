@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'gilroyextrabold';
-  src: url('fonts/gilroyextrabold-webfont.woff2') format('woff2');
+  src: url('../fonts/gilroyextrabold-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'gilroylight';
-  src: url('fonts/gilroylight-webfont.woff2') format('woff2');
+  src: url('../fonts/gilroylight-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'open_sansregular';
-  src: url('fonts/opensans-regular-webfont.woff2') format('woff2');
+  src: url('../fonts/opensans-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 
@@ -24,11 +24,12 @@
 
 @font-face {
   font-family: 'open_sanslight';
-  src: url('fonts/opensans-light-webfont.woff2') format('woff2');
+  src: url('../fonts/opensans-light-webfont.woff2') format('woff2');
   font-weight: lighter;
   font-style: normal;
 
 }
+
 
 body {
   margin: 0;
@@ -77,6 +78,7 @@ a {
   letter-spacing: 0.2em;
   background-image: linear-gradient(#ffffff 29%, #f4d361 29%, #f0c52e 71%, #ffffff 71%);
   border: none;
+  outline: none;
 }
 
 
@@ -125,19 +127,57 @@ background-color: #f7e296;
   letter-spacing: 0.01em;
 }
 
-#search {
+.user-navigation-search ::placeholder {
   font-family: open_sanslight, sans-serif;
   color: rgba(0,0,0,0.3);
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.01em;
   font-weight: lighter;
-  background-color: transparent;
+  align-content: center;
 }
 
-.user-navigation-search input[type="text"] {
+
+.user-navigation-search:hover ::placeholder {
+ color: rgba(0,0,0,0.6);
+}
+
+.user-navigation-search:focus ::placeholder {
+ color: rgb(0,0,0,0.6);
+}
+
+.user-navigation-search:active ::placeholder {
+  color: rgb(0,0,0);
+}
+
+
+.user-navigation-search input {
   background-color: transparent;
-  border:0px solid #000000;
+  border: 0px solid #000000;
+  outline: none;
+  display: flex;
+}
+
+.button-search {
+  background-color: transparent;
+  border: 2px solid #000000;
+  font-family: open_sanslight, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  outline: none;
+}
+
+.button-search:hover {
+  background-color: black;
+  font-family: open_sanslight, sans-serif;
+  color: white;
+}
+
+.button-search:active {
+  background-color: black;
+  font-family: open_sanslight, sans-serif;
+  color: rgba(255, 255, 255, 0.3)
 }
 
 .user-navigation {
@@ -211,6 +251,7 @@ ul.company-list {
   letter-spacing: 0.2em;
   background-image: linear-gradient(#ffffff 30%, #f0c52e 30%,#f0c52e 60%, #ffffff 60%);
   border: none;
+  outline: none;
 }
 
 .logout-button {
@@ -223,6 +264,19 @@ ul.company-list {
   background-color: transparent;
   padding: 0px;
   border: 0px;
+  outline: none;
+}
+
+.logout-button:hover {
+  color: rgba(0,0,0,0.6);
+}
+
+.logout-button:focus {
+  color: rgba(0,0,0,0.6);
+}
+
+.logout-button:active {
+  color: rgb(0,0,0);
 }
 
 .page-title {
@@ -256,7 +310,6 @@ ul.company-list {
   color: rgba(0, 0, 0, 0.1);
 }
 
-
 .filter fieldset {
   border: none;
 }
@@ -287,6 +340,7 @@ ul.company-list {
   letter-spacing: 0.2em;
   background-image: linear-gradient(#ffffff 30%, #f0c52e 30%,#f0c52e 60%, #ffffff 60%);
   border: none;
+  outline: none;
 }
 
 .catalog-list {
@@ -331,6 +385,16 @@ ul.company-list {
   line-height: 48px;
   letter-spacing: 0.01em;
 }
+
+.footer-logo a:focus,
+.footer-logo a:hover {
+  color: rgba(255, 198, 0, 0.6);
+}
+
+.footer-logo a:active {
+  color: rgba(255, 198, 0, 0.3);
+}
+
 
 .user-footer-navigation,
 .site-footer-navigation {
@@ -381,6 +445,7 @@ ul.company-list {
   background-color: transparent;
   padding: 0px;
   border: 0px;
+  outline: none;
 }
 
 .site-footer-navigation {
@@ -443,6 +508,7 @@ ul.company-list {
  .modal-write-us-item input[type="text"] {
   background-color: #f2f2f2;
   border:0px solid transparent;
+  outline: none;
 }
 
 .modal-map {
@@ -466,5 +532,61 @@ ul.company-list {
   font-weight: lighter;
  }
 
+/* ----- Сеточные стили ----- */
+
+/* html,
+body {
+  min-width: 1122px;
+  min-height: 1750px;
+}
+
+.main-header {
+  min-height: 285px;
+  margin: 0px;
+  padding: 0px;
+  background: white;
+}
+
+.main-navigation {
+  display: flex;
+  min-height: 285px;
+  flex-direction: column;
+}
+
+.site-navigation-catalog {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .main-navigation-wrapper .container {
+  margin-top: 39px;
+  margin-left: 135px;
+  margin-right: 135px;
+  display: flex;
+  justify-content: space-between;
+} */
+
+/*
+.main-header-logo {
+  width: 163px;
+  height: 53px;
+  border: 1px solid black;
+  flex-direction: column;
+}
+
+.main-header-logo-wrapper  {
+  width: 167px;
+  border: 1px solid black;
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
 
 
+.user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px;
+} */
